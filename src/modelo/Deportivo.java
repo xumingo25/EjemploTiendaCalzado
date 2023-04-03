@@ -29,4 +29,10 @@ public class Deportivo extends Calzado{
     public void setTipoMaterial(String tipoMaterial) {
         this.tipoMaterial = tipoMaterial;
     }
+
+    //•	impuestoMaterial: retornará el valor de impuesto de material el cual es un
+    // 15% del valor base si el calzado es de Cuero y de un 6% del valor base si es de Lona
+    public int impuestoMaterial(){
+        return 0;
+    }
 }

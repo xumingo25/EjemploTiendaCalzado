@@ -19,4 +19,10 @@ public class Formal extends Calzado {
     public void setColor(String color) {
         this.color = color;
     }
+
+    //•	impuestoEspecifico: retornará el valor de impuesto específico
+    // el cual es un 7.4% del valor base (el calzado deportivo no paga éste impuesto)
+    public int impuestoEspecifico(){
+        return 0;
+    }
 }

@@ -6,5 +6,9 @@ public class Hombre extends Formal {
         super(diaVenta, numero, producto, color);
     }
 
+    public Hombre(){
+
+    }
+
 
 }
