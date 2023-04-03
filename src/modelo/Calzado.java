@@ -1,8 +1,42 @@
 package modelo;
 
 public class Calzado {
-    public String diaVenta; //Semana o Fin de Semana
-    public int numero; //44
+    private String diaVenta;
+    private int numero;
 
-    public Producto producto; //{"123ABC",100,1000}
+    private Producto producto;
+
+    public Calzado(String diaVenta, int numero, Producto producto) {
+        super();
+        this.diaVenta = diaVenta;
+        this.numero = numero;
+        this.producto = producto;
+    }
+
+    public Calzado() {
+    }
+
+    public String getDiaVenta() {
+        return diaVenta;
+    }
+
+    public void setDiaVenta(String diaVenta) {
+        this.diaVenta = diaVenta;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public Producto getProducto() {
+        return producto;
+    }
+
+    public void setProducto(Producto producto) {
+        this.producto = producto;
+    }
 }
