@@ -1,6 +1,6 @@
 package modelo;
 
-public class Calzado {
+public abstract class Calzado {
     private String diaVenta;
     private int numero;
 
@@ -58,7 +58,10 @@ public class Calzado {
 
     //•	impuestoIva: retornará el valor por concepto de IVA que es el 19% del valor venta
     public int impuestoIVA(){
-        return 0;
+        return Math.round(this.valorVenta()*19/100);
     }
+
+
+    public abstract int valorAPagar();
 
 }
