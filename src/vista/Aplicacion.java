@@ -1,43 +1,76 @@
-package vista; //te esta diciendo el package que pertenece la clase :D
-//linkea :D
-import modelo.Calzado;
+package vista;
+
+import controlador.TiendaCalzado;
 import modelo.Deportivo;
-import modelo.Producto;
 import modelo.Hombre;
 import modelo.Mujer;
+import modelo.Producto;
 
-//Los modificadores de acceso definen el como acceso a las clases/Atributos/metodos
-public class Aplicacion { //Define la estructura de la clase
+import java.util.ArrayList;
+import java.util.Scanner;
 
+public class Aplicacion {
     public static void main(String[] args) {
+        TiendaCalzado tienda = new TiendaCalzado(new ArrayList<>());
 
+        /*
         Deportivo deportivo = new Deportivo (new Producto("123ABC",100,10000),44,"Fin de semana","Futbol","Cuero");
-
-        Deportivo deportivo2 = new Deportivo();
 
         Hombre hombre = new Hombre(new Producto("222AAA",10,200000), "Fin de semana",43,"VERDE");
 
         Mujer mujer = new Mujer(new Producto("222AAA",10,200000), "Fin de semana",43,"Negro",12);;
 
-        System.out.println("El impuesto especifico del calzado de hombre es: $"+hombre.impuestoEspecifico());
-        System.out.println("El impuesto especifico del calzado de mujer es: $"+mujer.impuestoEspecifico());
+        tienda.ingresarCalzadoDeportivo(deportivo);
+        tienda.ingresarCalzadoHombre(hombre);
+        tienda.ingresarCalzadoMujer(mujer); */
 
+        int opcion;
+        do{
+                opcion = menu();
+                switch(opcion){
+                    case 1:
+                        System.out.println("Ingreso Calzados");
+                        break;
+                    case 2:
+                        System.out.println("Mostrar Calzados Mujer");
+                        break;
+                    case 3:
+                        System.out.println("Valor Venta");
+                        break;
+                    case 4:
+                        System.out.println("Calzados top");
+                        break;
+                    case 5:
+                        System.out.println("Total Impuesto Especifico");
+                        break;
+                    case 6:
+                        System.out.println("Total descuento");
+                        break;
+                }
 
-        System.out.println("el valor venta del calzado deportivo durante la "+ deportivo.getDiaVenta() +
-                " es: $ "+ deportivo.valorVenta());
-
-        System.out.println("el valor venta del calzado hombre durante la "+ hombre.getDiaVenta() +
-                " es: $ "+ hombre.valorVenta());
-
-        System.out.println("el valor venta del calzado mujer durante la "+ mujer.getDiaVenta() +
-                " es: $ "+ mujer.valorVenta());
-
-        System.out.println("el impuesto al iva del calzado deportivo es: $ "+ deportivo.impuestoIVA());
-
-        System.out.println("Descuento calzado Hombre: $"+hombre.descuento());
-
-        System.out.println("Descuento calzado Mujer: $"+mujer.descuento());
+            }while(opcion !=7); //repetir
 
 
     }
+
+    public static int menu(){
+        System.out.println("**********Tienda Calzados BC12 V1.Algo :D *********");
+        System.out.println("1.\tIngresar ");
+        System.out.println("2.\tMostrar sólo los calzado de mujer");
+        System.out.println("3.\tValor Venta");
+        System.out.println("4.\tCalzados top");
+        System.out.println("5.\tTotal Impuesto Especifico");
+        System.out.println("6.\tTotal descuento");
+        System.out.println("7.\tSalir");
+        System.out.println("Favor ingrese opción para continuar...");
+
+        return Leer.datoInt();
+    }
+
+    public static String pedirCodigo(){
+        System.out.println("Favor ingrese codigo del calzado (Ej: 123ABC)");
+        return Leer.dato();
+    }
+
+
 }
